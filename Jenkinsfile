@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('** PHP APP DEPLOYMENT ON APACHE SERVER**') {
+        stage('** CLONING CODE  **') {
             steps {
-                
+                git branch: 'main', credentialsId: 'af3bb9e4-fac6-45a5-9f97-f84a12608e3c', url: 'https://github.com/pujaaRani/jenkins-cicd-php-demo.git'
             }
         }
     stages {
