@@ -1,3 +1,4 @@
 FROM php
-COPY ./index.php 
-CMD
+COPY *.php /var/www/html/
+EXPOSE 80
+CMD ["apache2-foreground"]
