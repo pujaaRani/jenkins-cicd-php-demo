@@ -14,7 +14,8 @@ kind: Service
 metadata:
   name: index-service
 spec:
-  selector:
-    name: index-pod
+  type: Nodeport
   ports:
       port: 80
+  selector:
+    name: index-pod
