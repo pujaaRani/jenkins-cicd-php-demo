@@ -10,7 +10,7 @@ spec:
       image: pujaamanish/php-app
       ports:
         - containerPort: 80
---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -18,7 +18,7 @@ metadata:
 spec:
   type: Nodeport
   ports:
-      port: 8080
-      targetPort: 80
+     - port: 8080
+       targetPort: 80
   selector:
     app: myapp
