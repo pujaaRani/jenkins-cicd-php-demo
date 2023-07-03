@@ -3,6 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-php-deployment
+  labels:
+    demo: php-svc
 spec:
   replicas: 2
   selector:
@@ -25,7 +27,7 @@ metadata:
   name: my-php-service
 spec:
   selector:
-    app: my-app
+    demo: php-svc
   ports:
     - port: 80
       targetPort: 80
